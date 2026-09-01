@@ -11,7 +11,10 @@
 <meta property="og:title" content="Tahmid Al Nahiyan — Digital Entrepreneur & Security Advocate">
 <meta property="og:description" content="Microsoft-certified cybersecurity specialist and digital entrepreneur helping businesses thrive in the digital age.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://thamidainahiyan.github.io/">
+<meta property="og:image" content="https://thamidainahiyan.github.io/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://thamidainahiyan.github.io/og-cover.jpg">
 <link rel="canonical" href="https://thamidainahiyan.github.io/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -241,7 +244,7 @@ section{position:relative;z-index:3;padding:120px 0}
 .services-label{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text);margin-bottom:24px;opacity:0;transform:translateY(15px);transition:all .5s var(--ease-expo)}
 .services-label.visible{opacity:1;transform:translateY(0)}
 .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.service-item{display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;font-size:.78rem;color:var(--text-muted);transition:all .4s var(--ease-smooth);backdrop-filter:blur(10px);cursor:pointer;opacity:0;transform:translateY(15px) scale(.98)}
+.service-item{display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;font-size:.78rem;color:var(--text-muted);transition:all .4s var(--ease-smooth);backdrop-filter:blur(10px);opacity:0;transform:translateY(15px) scale(.98)}
 .service-item.visible{opacity:1;transform:translateY(0) scale(1)}
 .service-item:hover{border-color:var(--border-hover);color:var(--text);background:rgba(255,255,255,.06);transform:translateX(8px) scale(1.02);box-shadow:0 8px 30px rgba(0,0,0,.3)}
 .service-item svg{width:15px;height:15px;color:var(--text-dim);flex-shrink:0;transition:all .3s}
@@ -300,12 +303,43 @@ section{position:relative;z-index:3;padding:120px 0}
 .tool-tag span{position:relative;z-index:1}
 .language-item{margin-bottom:24px;opacity:0;transform:translateX(-15px);transition:all .5s var(--ease-expo)}
 .language-item.visible{opacity:1;transform:translateX(0)}
+.language-header{display:flex;justify-content:space-between;margin-bottom:10px}
+.language-name{font-size:.82rem;color:var(--text);font-weight:500}
+.language-level{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--text-dim)}
+
+/* ═══════════════════════════════════════════
+   TOOLS & SOFTWARE SECTION
+   ═══════════════════════════════════════════ */
+#tools{background:var(--bg);border-top:1px solid var(--border);position:relative}
+#tools::before{content:'03';position:absolute;left:0;top:80px;font-weight:900;font-size:14rem;color:rgba(255,255,255,.015);line-height:1;pointer-events:none;user-select:none;letter-spacing:-.05em}
+.toolbox-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.tool-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px 16px 22px;display:flex;flex-direction:column;align-items:center;gap:14px;transition:all .5s var(--ease-smooth);backdrop-filter:blur(10px);opacity:0;transform:translateY(24px) scale(.96)}
+.tool-card.visible{opacity:1;transform:translateY(0) scale(1)}
+.tool-card:nth-child(1){transition-delay:.05s}
+.tool-card:nth-child(2){transition-delay:.1s}
+.tool-card:nth-child(3){transition-delay:.15s}
+.tool-card:nth-child(4){transition-delay:.2s}
+.tool-card:nth-child(5){transition-delay:.25s}
+.tool-card:nth-child(6){transition-delay:.3s}
+.tool-card:nth-child(7){transition-delay:.35s}
+.tool-card:nth-child(8){transition-delay:.4s}
+.tool-card:nth-child(9){transition-delay:.45s}
+.tool-card:nth-child(10){transition-delay:.5s}
+.tool-card:hover{border-color:var(--border-hover);background:rgba(255,255,255,.05);transform:translateY(-6px) scale(1.03);box-shadow:0 20px 48px rgba(0,0,0,.5)}
+.tool-icon{width:56px;height:56px;border-radius:13px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:all .4s var(--ease-smooth)}
+.tool-card:hover .tool-icon{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2)}
+.tool-icon svg{width:32px;height:32px}
+.tool-name{font-size:.68rem;color:var(--text-muted);text-align:center;font-family:'JetBrains Mono',monospace;letter-spacing:.04em;line-height:1.5;transition:color .3s}
+.tool-card:hover .tool-name{color:var(--text)}
+@media(max-width:900px){.toolbox-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:600px){.toolbox-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:400px){.toolbox-grid{grid-template-columns:repeat(2,1fr)}}
 
 /* ═══════════════════════════════════════════
    CERTIFICATIONS SECTION
    ═══════════════════════════════════════════ */
 #certs{background:var(--bg);border-top:1px solid var(--border);position:relative}
-#certs::before{content:'03';position:absolute;right:0;top:80px;font-weight:900;font-size:14rem;color:rgba(255,255,255,.015);line-height:1;pointer-events:none;user-select:none;letter-spacing:-.05em}
+#certs::before{content:'04';position:absolute;right:0;top:80px;font-weight:900;font-size:14rem;color:rgba(255,255,255,.015);line-height:1;pointer-events:none;user-select:none;letter-spacing:-.05em}
 .certs-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .cert-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:32px;display:flex;align-items:flex-start;gap:18px;position:relative;overflow:hidden;transition:all .5s var(--ease-smooth);backdrop-filter:blur(10px);opacity:0;transform:translateY(30px) rotateX(5deg);transform-style:preserve-3d;perspective:1000px}
 .cert-card.visible{opacity:1;transform:translateY(0) rotateX(0)}
@@ -331,7 +365,7 @@ section{position:relative;z-index:3;padding:120px 0}
    CONTACT SECTION
    ═══════════════════════════════════════════ */
 #contact{background:var(--bg-elevated);border-top:1px solid var(--border);position:relative}
-#contact::before{content:'04';position:absolute;left:0;top:80px;font-weight:900;font-size:14rem;color:rgba(255,255,255,.015);line-height:1;pointer-events:none;user-select:none;letter-spacing:-.05em}
+#contact::before{content:'05';position:absolute;left:0;top:80px;font-weight:900;font-size:14rem;color:rgba(255,255,255,.015);line-height:1;pointer-events:none;user-select:none;letter-spacing:-.05em}
 .contact-grid{display:grid;grid-template-columns:1.2fr 1fr 1.2fr;gap:60px}
 .contact-heading{font-weight:900;font-size:clamp(2.5rem,4.5vw,3.8rem);letter-spacing:-.04em;line-height:.95;color:var(--text);margin-bottom:24px;opacity:0;transform:translateY(30px);transition:all .8s var(--ease-expo)}
 .contact-heading.visible{opacity:1;transform:translateY(0)}
@@ -424,7 +458,7 @@ footer{border-top:1px solid var(--border);padding:28px 48px;display:flex;align-i
 .stat-card:nth-child(2){border-right:none}
 .stat-card:nth-child(3),.stat-card:nth-child(4){border-top:1px solid var(--border)}
 .stat-card:nth-child(3){border-right:1px solid var(--border)}
-#about::before,#skills::before,#certs::before,#contact::before{display:none}
+#about::before,#skills::before,#tools::before,#certs::before,#contact::before{display:none}
 }
 @media(max-width:768px){
 nav{padding:0 24px}
@@ -453,14 +487,20 @@ footer{padding:24px;flex-direction:column;gap:10px;text-align:center}
 #intro{display:none!important}
 .hero-left,.hero-name,.hero-role,.hero-desc,.hero-contacts,.hero-socials,.hero-cta,.hero-right,.hero-status,.hero-time{opacity:1!important;animation:none!important;transform:none!important}
 }
+/* Skip to content */
+.skip-link{position:absolute;top:-100px;left:0;background:var(--bg);color:var(--text);padding:12px 24px;z-index:999999;border:1px solid var(--border);border-bottom-right-radius:8px;font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;transition:top .3s var(--ease-smooth);text-decoration:none}
+.skip-link:focus{top:0}
+/* Scrollbar */
 ::-webkit-scrollbar{width:6px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--text-faint);border-radius:3px}
 ::-webkit-scrollbar-thumb:hover{background:var(--text-dim)}
 </style>
-<base target="_blank">
 </head>
 <body>
+
+<!-- Skip to content -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Custom Cursor -->
 <div id="cursor-dot"></div>
@@ -499,11 +539,12 @@ footer{padding:24px;flex-direction:column;gap:10px;text-align:center}
 <div class="toast" id="toast"></div>
 
 <!-- Navigation -->
-<nav id="navbar">
+<nav id="navbar" aria-label="Main navigation">
   <a href="#hero" class="nav-logo"><span class="logo-dot"></span>NAHIYAN</a>
   <ul class="nav-links">
-    <li><a href="#hero" class="active">About</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#tools">Tools</a></li>
     <li><a href="#certs">Certs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -513,13 +554,17 @@ footer{padding:24px;flex-direction:column;gap:10px;text-align:center}
   </button>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#hero">About</a>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#about">About</a>
   <a href="#skills">Skills</a>
+  <a href="#tools">Tools</a>
   <a href="#certs">Certifications</a>
   <a href="#contact">Contact</a>
   <a href="mailto:strikeultra41@gmail.com" class="mobile-hire">Hire Me</a>
 </div>
+
+<!-- Main Content -->
+<main id="main-content">
 
 <!-- Hero Section -->
 <section id="hero">
@@ -645,7 +690,7 @@ footer{padding:24px;flex-direction:column;gap:10px;text-align:center}
 <!-- Stats Section -->
 <section id="stats">
   <div class="stats-grid">
-    <div class="stat-card"><div class="stat-number" data-target="4" data-suffix="+">0</div><div class="stat-label">Microsoft Certifications</div></div>
+    <div class="stat-card"><div class="stat-number" data-target="5" data-suffix="+">0</div><div class="stat-label">Certifications</div></div>
     <div class="stat-card"><div class="stat-number" data-target="100" data-suffix="%">0</div><div class="stat-label">Client Satisfaction</div></div>
     <div class="stat-card"><div class="stat-number" data-target="12" data-suffix="">0</div><div class="stat-label">Services Offered</div></div>
     <div class="stat-card"><div class="stat-number" data-target="48" data-suffix="">0</div><div class="stat-label">Districts Trained</div></div>
@@ -698,10 +743,132 @@ footer{padding:24px;flex-direction:column;gap:10px;text-align:center}
   </div>
 </section>
 
+<!-- Tools & Software Section -->
+<section id="tools">
+  <div class="container">
+    <span class="section-tag">// 03</span>
+    <h2 class="section-title">TOOLS &amp; SOFTWARE</h2>
+    <div class="section-line"></div>
+    <div class="toolbox-grid">
+
+      <!-- Adobe Photoshop -->
+      <div class="tool-card">
+        <div class="tool-icon">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <text x="20" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="17" fill="white" letter-spacing="-0.5">Ps</text>
+          </svg>
+        </div>
+        <span class="tool-name">Adobe Photoshop</span>
+      </div>
+
+      <!-- Adobe Illustrator -->
+      <div class="tool-card">
+        <div class="tool-icon">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <text x="20" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="17" fill="white" letter-spacing="-0.5">Ai</text>
+          </svg>
+        </div>
+        <span class="tool-name">Adobe Illustrator</span>
+      </div>
+
+      <!-- Adobe XD -->
+      <div class="tool-card">
+        <div class="tool-icon">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <text x="20" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="17" fill="white" letter-spacing="-0.5">Xd</text>
+          </svg>
+        </div>
+        <span class="tool-name">Adobe XD</span>
+      </div>
+
+      <!-- Adobe InDesign -->
+      <div class="tool-card">
+        <div class="tool-icon">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <text x="20" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="17" fill="white" letter-spacing="-0.5">Id</text>
+          </svg>
+        </div>
+        <span class="tool-name">Adobe InDesign</span>
+      </div>
+
+      <!-- Figma -->
+      <div class="tool-card">
+        <div class="tool-icon">
+          <svg viewBox="0 0 28 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="5"  cy="5"  r="3.2" fill="white"/>
+            <circle cx="14" cy="5"  r="3.2" fill="white"/>
+            <circle cx="23" cy="5"  r="3.2" fill="white"/>
+            <circle cx="5"  cy="14" r="3.2" fill="white"/>
+            <circle cx="14" cy="14" r="3.2" fill="white"/>
+            <circle cx="23" cy="14" r="3.2" fill="white"/>
+          </svg>
+        </div>
+        <span class="tool-name">Figma</span>
+      </div>
+
+      <!-- HTML5 -->
+      <div class="tool-card">
+        <div class="tool-icon">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <text x="20" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-weight="700" font-size="13" fill="white">&lt;/&gt;</text>
+            <text x="20" y="34" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="8" fill="rgba(255,255,255,0.55)">HTML5</text>
+          </svg>
+        </div>
+        <span class="tool-name">HTML5</span>
+      </div>
+
+      <!-- CSS3 -->
+      <div class="tool-card">
+        <div class="tool-icon">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <text x="20" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-weight="700" font-size="13" fill="white">{ }</text>
+            <text x="20" y="34" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="8" fill="rgba(255,255,255,0.55)">CSS3</text>
+          </svg>
+        </div>
+        <span class="tool-name">CSS3</span>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="tool-card">
+        <div class="tool-icon">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <text x="20" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="17" fill="white" letter-spacing="-0.5">JS</text>
+          </svg>
+        </div>
+        <span class="tool-name">JavaScript</span>
+      </div>
+
+      <!-- Notion -->
+      <div class="tool-card">
+        <div class="tool-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+            <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+            <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+            <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+          </svg>
+        </div>
+        <span class="tool-name">Notion</span>
+      </div>
+
+      <!-- Microsoft Word -->
+      <div class="tool-card">
+        <div class="tool-icon">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <text x="20" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="20" fill="white">W</text>
+          </svg>
+        </div>
+        <span class="tool-name">Microsoft Word</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- Certifications Section -->
 <section id="certs">
   <div class="container">
-    <span class="section-tag">// 03</span>
+    <span class="section-tag">// 04</span>
     <h2 class="section-title">CERTIFICATIONS</h2>
     <div class="section-line"></div>
     <div class="certs-grid">
@@ -721,6 +888,18 @@ footer{padding:24px;flex-direction:column;gap:10px;text-align:center}
         <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <div><div class="cert-org">Dept. of Youth Development — Bangladesh</div><div class="cert-title">Freelancing Training Course — Employment Creation Through Freelancing (48 Districts)</div><div class="cert-date">January 1 – March 31, 2020</div></div>
       </div>
+      <div class="cert-card">
+        <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/><path d="M12 7v4"/><path d="M9 7h6"/></svg></div>
+        <div><div class="cert-org">Bangladesh Government — Skill Development</div><div class="cert-title">Web Design &amp; Development for Freelancer (Level 3)</div><div class="cert-date">Issued by Bangladesh Government</div></div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/><path d="M3.05 11a9 9 0 1 0 .5-2.6"/></svg></div>
+        <div><div class="cert-org">Microsoft</div><div class="cert-title">Draft, Analyze, and Present with Microsoft 365 Copilot</div><div class="cert-date">September 1, 2026</div></div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div><div class="cert-org">Microsoft</div><div class="cert-title">Microsoft Azure Administrator</div><div class="cert-date">July 4, 2026</div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -728,10 +907,10 @@ footer{padding:24px;flex-direction:column;gap:10px;text-align:center}
 <!-- Contact Section -->
 <section id="contact">
   <div class="container">
-    <span class="section-tag">// 04</span>
+    <span class="section-tag">// 05</span>
     <div class="contact-grid">
       <div>
-        <div class="contact-heading">LET'S<br><span>WORK</span><br>TOGETHER</div>
+        <h2 class="contact-heading">LET'S<br><span>WORK</span><br>TOGETHER</h2>
         <p class="contact-sub">Have a project in mind or want to discuss potential opportunities? I'd love to hear from you.</p>
         <a href="mailto:strikeultra41@gmail.com" class="btn-primary ripple magnetic" style="width:fit-content;">Let's Work Together</a>
       </div>
@@ -762,9 +941,11 @@ footer{padding:24px;flex-direction:column;gap:10px;text-align:center}
   </div>
 </section>
 
+</main>
+
 <!-- Footer -->
 <footer>
-  <span class="footer-copy">© 2025 Tahmid Al Nahiyan — All rights reserved.</span>
+  <span class="footer-copy">© 2026 Tahmid Al Nahiyan — All rights reserved.</span>
   <span class="footer-brand">NAHIYAN</span>
 </footer>
 
@@ -816,7 +997,7 @@ const IS_BOT = navigator.webdriver || !window.requestAnimationFrame;
     if (!raf) raf = requestAnimationFrame(loop);
   }, {passive: true});
 
-  var hoverTargets = 'a,button,.cert-card,.service-item,.tool-tag,.social-btn,.btn-primary,.btn-secondary,.btn-hire';
+  var hoverTargets = 'a,button,.cert-card,.tool-card,.service-item,.tool-tag,.social-btn,.btn-primary,.btn-secondary,.btn-hire';
   document.addEventListener('mouseover', function(e) {
     if (e.target.closest(hoverTargets)) document.body.classList.add('cursor-hover');
   }, {passive: true});
@@ -918,12 +1099,16 @@ const IS_BOT = navigator.webdriver || !window.requestAnimationFrame;
     var isOpen = hamburger.classList.toggle('active');
     mobileMenu.classList.toggle('open', isOpen);
     hamburger.setAttribute('aria-expanded', isOpen);
+    mobileMenu.setAttribute('aria-hidden', !isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
   mobileMenu.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', function() {
       hamburger.classList.remove('active');
       mobileMenu.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
     });
   });
 })();
@@ -1066,6 +1251,19 @@ const IS_BOT = navigator.webdriver || !window.requestAnimationFrame;
   langItems.forEach(function(el) { langObs.observe(el); });
 
   // Cert cards
+  // Tool cards staggered fade-in
+  var toolCards = document.querySelectorAll('.tool-card');
+  var toolObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (!e.isIntersecting) return;
+      toolCards.forEach(function(card, i) {
+        setTimeout(function() { card.classList.add('visible'); }, i * 70);
+      });
+      toolObs.disconnect();
+    });
+  }, {threshold: 0.05});
+  if (toolCards.length) toolObs.observe(toolCards[0].parentElement);
+
   var certCards = document.querySelectorAll('.cert-card');
   var certObs = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
@@ -1102,7 +1300,7 @@ const IS_BOT = navigator.webdriver || !window.requestAnimationFrame;
 // ═══════════════════════════════════════════
 (function() {
   var navLinks = document.querySelectorAll('.nav-links a');
-  var sections = ['hero', 'about', 'skills', 'certs', 'contact'];
+  var sections = ['about', 'skills', 'tools', 'certs', 'contact'];
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
